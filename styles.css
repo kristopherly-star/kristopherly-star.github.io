@@ -1,19 +1,110 @@
+/* Professional Portfolio CSS */
+
+:root {
+    --primary-color: #003566; /* Deep blue */
+    --secondary-color: #ffc300; /* Gold/Yellow accent */
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --header-bg: #ffffff;
+}
+
 body {
-    background: #f0f8ff; /* This is a light Alice Blue */
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 40px; /* Adds some nice breathing room around your content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: #2c3e50; /* This is a deep Navy Blue */
+header {
+    background-color: var(--header-bg);
+    color: var(--primary-color);
+    padding: 2rem 0;
     text-align: center;
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Let's add styling for your "About Me" section too! */
-.about {
-    background: #ffffff;
-    padding: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
-    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.project-item {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        margin: 1rem auto;
+    }
+}
